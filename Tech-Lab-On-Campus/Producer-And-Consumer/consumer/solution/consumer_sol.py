@@ -12,7 +12,7 @@ class mqConsumer(mqConsumerInterface):
         self.exchange_name = exchange_name
         self.queue_name = queue_name
         self.setupRMQConnection()
-
+ 
 
 
     def setupRMQConnection(self) -> None:
