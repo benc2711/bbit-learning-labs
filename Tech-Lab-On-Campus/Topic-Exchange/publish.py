@@ -46,8 +46,8 @@ if __name__ == "__main__":
     #
     #                       WRITE CODE HERE!!!
     #
-    ticker = sys.argv[0]
-    price = sys.argv[1]
-    sector = sys.argv[2]
+    ticker = sys.argv[0] if len(sys.argv) > 2 else '*'
+    price = sys.argv[1] if len(sys.argv) > 2 else '*'
+    sector = sys.argv[2] if len(sys.argv) > 2 else '*'
 
     sys.exit(main(ticker,price,sector))
