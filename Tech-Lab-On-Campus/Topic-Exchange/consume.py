@@ -23,6 +23,7 @@ def main(sector: str, queueName: str) -> None:
     #
     #                       WRITE CODE HERE!!!
     #
+    bindingKey = "*." + sector + ".*"
     
     consumer = mqConsumer(binding_key=bindingKey,exchange_name="Tech Lab Topic Exchange",queue_name=queueName)    
     consumer.startConsuming()
@@ -32,6 +33,9 @@ def main(sector: str, queueName: str) -> None:
 if __name__ == "__main__":
 
     # Implement Logic to read the sector and queueName string from the command line and save them - Step 1
+
+    sector = sys.argv[1] if len(sys.argv) > 2 else '*'
+    queue = sys.argv[2] if len(sys.argv) > 2 else '*'
     #
     #                       WRITE CODE HERE!!!
     #
